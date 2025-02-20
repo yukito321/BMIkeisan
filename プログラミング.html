@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+
+	<form method="post" action="#">
+	
+	<font size="6" color="blue">
+	<div align="center">
+		BMI計算ツール
+		</div>
+		</font>
+	
+	
+	<p>性別:<input type="radio"name="radio" value="radio">男
+			<input type="radio"name="radio" value="radio">女</p>
+		
+	<p>名前:<input type="text" name="NAME"value="ここに名前を入れる" ></p>
+			
+	<p>メールアドレス:<input type="text" name="email"></p>
+	
+		<p><input type="submit" value="送信する"id="sousin"></p>
+		<p><input type="reset" value="取消する"></p>
+	
+		<p>身長<input type="text"id="height"></p>	
+		<p>体重<input type="text"id="weight"></p>
+		
+	</form>
+	
+	
+	<script>
+	
+	
+	document.getElementById("sousin").onclick = function() {
+	
+	    const weight = document.getElementById("weight").value;
+  	 	const height = document.getElementById("height").value;
+	
+	let BMI=weight/(height*height/10000);
+	
+    document.write("あなたのBMIは"+BMI+"です。<br>");
+
+	
+	if(BMI<18.5)
+	
+	document.write("あなたは瘦せ型です。");
+
+	else if(25>BMI>=18.5)
+	
+	document.write("普通体重です。");
+	
+	else if(BMI>=25)
+	
+	document.write("肥満です。");
+	
+	};
+
+	</script>
+	
+	</body>
+</html>
